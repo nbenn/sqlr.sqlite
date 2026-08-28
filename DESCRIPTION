@@ -1,0 +1,31 @@
+Package: sqlr.sqlite
+Title: SQLite Dialect for sqlr
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Nicolas", "Bennett", email = "r@nbenn.ch", role = c("aut", "cre")))
+Description:
+    Renders the schema representation of the sqlr package as SQLite data
+    definition language, and reflects a live SQLite database back into that
+    representation.
+Depends:
+    R (>= 4.1)
+Imports:
+    sqlr,
+    S7,
+    DBI
+Suggests:
+    RSQLite,
+    testthat (>= 3.0.0)
+URL: https://github.com/nbenn/sqlr
+BugReports: https://github.com/nbenn/sqlr/issues
+Remotes:
+    nbenn/sqlr
+License: MIT + file LICENSE
+Encoding: UTF-8
+Config/testthat/edition: 3
+Collate:
+    'sqlr.sqlite-package.R'
+    'dialect.R'
+    'render.R'
+    'reflect.R'
+Config/roxygen2/version: 8.1.0
