@@ -19,9 +19,10 @@ Passed to [sqlr::sqlr_render()] to emit SQLite, and resolved automatically
 from a `SQLiteConnection` by [sqlr::sqlr_for()].
 }
 \details{
-SQLite stores the declared type of a column verbatim and applies affinity
-rules to it, so types render under their standard names and are read back by
-the same parser that handles authored spellings.
+SQLite accepts any type name in a column declaration and derives the
+column's affinity from it. A type spelling that this dialect renders is
+reflected back as the type it came from; any other declared type comes back
+as [sqlr::sqlr_other()] with its spelling intact.
 
 Two limitations are worth knowing. Check constraints cannot be reflected:
 SQLite records them only inside the original `CREATE TABLE` text, and

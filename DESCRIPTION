@@ -27,5 +27,6 @@ Collate:
     'sqlr.sqlite-package.R'
     'dialect.R'
     'render.R'
+    'parse_type.R'
     'reflect.R'
 Config/roxygen2/version: 8.1.0

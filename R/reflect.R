@@ -31,7 +31,7 @@ reflect_table <- function(con, name) {
 reflect_column <- function(row) {
   sqlr_column(
     name = row$name,
-    type = as_sqlr_type(tolower(row$type)),
+    type = type_from_declared(row$type),
     null = row$notnull == 0L,
     default = parse_default(row$dflt_value)
   )
